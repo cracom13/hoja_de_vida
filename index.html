@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hoja de Vida - Camilo Andrés González Martínez</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #3498db;
+            --secondary-color: #2c3e50;
+            --accent-color: #e74c3c;
+            --light-gray: #f5f5f5;
+            --dark-gray: #7f8c8d;
+        }
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            color: var(--secondary-color);
+            background-color: #f9f9f9;
+        }
+        
+        .container {
+            max-width: 850px;
+            margin: 0 auto;
+            display: flex;
+            background: white;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        
+        .left-column {
+            flex: 1;
+            padding: 30px;
+        }
+        
+        .right-column {
+            width: 250px;
+            background: linear-gradient(135deg, var(--primary-color), #2980b9);
+            padding: 30px 20px;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        h1 {
+            font-weight: 700;
+            font-size: 28px;
+            margin-bottom: 5px;
+            color: var(--secondary-color);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        h2 {
+            font-weight: 500;
+            font-size: 18px;
+            margin-top: 0;
+            color: var(--dark-gray);
+        }
+        
+        h3 {
+            font-weight: 600;
+            font-size: 18px;
+            color: var(--primary-color);
+            border-left: 4px solid var(--primary-color);
+            padding-left: 10px;
+            margin: 25px 0 15px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .contact-info {
+            margin-bottom: 30px;
+        }
+        
+        .contact-info p {
+            margin: 8px 0;
+            font-weight: 400;
+            display: flex;
+            align-items: center;
+        }
+        
+        .contact-info i {
+            width: 20px;
+            margin-right: 10px;
+            color: var(--primary-color);
+        }
+        
+        .experience, .education, .summary, .skills {
+            margin-bottom: 30px;
+        }
+        
+        .job-title {
+            font-weight: 600;
+            margin-bottom: 5px;
+            font-size: 17px;
+            color: var(--secondary-color);
+        }
+        
+        .job-date {
+            font-weight: 500;
+            color: var(--dark-gray);
+            margin-bottom: 10px;
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .job-date i {
+            margin-right: 8px;
+        }
+        
+        .job-description {
+            margin-top: 0;
+            font-weight: 400;
+            padding-left: 24px;
+            position: relative;
+        }
+        
+        .job-description:before {
+            content: "▹";
+            position: absolute;
+            left: 0;
+            color: var(--primary-color);
+        }
+        
+        .education-item {
+            margin-bottom: 20px;
+            padding-left: 20px;
+            border-left: 2px solid var(--light-gray);
+        }
+        
+        .education-title {
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+        
+        .education-date {
+            font-weight: 500;
+            color: var(--dark-gray);
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .education-date i {
+            margin-right: 8px;
+        }
+        
+        .education-description {
+            font-weight: 400;
+        }
+        
+        .skills ul {
+            padding-left: 0;
+            margin-top: 5px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        
+        .skills li {
+            margin-bottom: 5px;
+            font-weight: 400;
+            background: var(--light-gray);
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 14px;
+            list-style: none;
+        }
+        
+        .profile-image {
+            width: 150px;
+            height: 150px;
+            background-color: white;
+            border-radius: 50%;
+            margin-top: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            border: 4px solid white;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .profile-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .personal-details {
+            margin-top: 30px;
+            width: 100%;
+        }
+        
+        .detail-item {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .detail-item i {
+            width: 25px;
+            font-size: 18px;
+            margin-right: 10px;
+            color: white;
+        }
+        
+        .detail-item span {
+            font-weight: 400;
+            font-size: 14px;
+        }
+        
+        .section-title {
+            color: white;
+            border-left: none;
+            padding-left: 0;
+            text-align: center;
+            margin: 30px 0 15px;
+            position: relative;
+        }
+        
+        .section-title:after {
+            content: "";
+            display: block;
+            width: 50px;
+            height: 2px;
+            background: white;
+            margin: 8px auto 0;
+        }
+        
+        .language-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+            width: 100%;
+        }
+        
+        .language-name {
+            font-weight: 500;
+        }
+        
+        .language-level {
+            display: flex;
+        }
+        
+        .dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: white;
+            margin-left: 5px;
+            opacity: 0.3;
+        }
+        
+        .dot.filled {
+            opacity: 1;
+        }
+        
+        .signature {
+            margin-top: auto;
+            text-align: center;
+            padding: 20px 0;
+            font-style: italic;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="left-column">
+            <h1>CAMILO ANDRÉS GONZÁLEZ MARTÍNEZ</h1>
+            <h2>Tecnólogo en Desarrollo de Sistemas | Ingeniero de Software en formación</h2>
+
+            <div class="summary">
+                <h3><i class="fas fa-user-tie" style="margin-right: 10px;"></i> PERFIL PROFESIONAL</h3>
+                <p class="education-description">
+                    Tecnólogo en Análisis y Desarrollo de Sistemas de Información con experiencia en soporte técnico y atención al cliente. 
+                    Actualmente cursando Ingeniería de Software. Apasionado por la resolución de problemas y el trabajo en equipo, 
+                    con habilidades técnicas sólidas y capacidad para aprender rápidamente nuevas tecnologías.
+                </p>
+            </div>
+
+            <div class="experience">
+                <h3><i class="fas fa-briefcase" style="margin-right: 10px;"></i> EXPERIENCIA LABORAL</h3>
+                <div class="job-title">ASESOR TÉCNICO - HELISA CLOUD</div>
+                <div class="job-date"><i class="far fa-calendar-alt"></i> 03 FEB 2022 – 15 FEB 2023</div>
+                <p class="job-description">
+                    Brindé soporte técnico especializado a clientes de software contable de manera telefónica y remota.
+                </p>
+                <p class="job-description">
+                    Resolví problemas técnicos complejos con un índice de satisfacción del cliente del 94%.
+                </p>
+                <p class="job-description">
+                    Documenté soluciones y creé manuales para el equipo de soporte.
+                </p>
+            </div>
+
+            <div class="education">
+                <h3><i class="fas fa-graduation-cap" style="margin-right: 10px;"></i> FORMACIÓN ACADÉMICA</h3>
+                <div class="education-item">
+                    <div class="education-title">Ingeniería de Software</div>
+                    <div class="education-date"><i class="fas fa-university"></i> UNIVERSIDAD MANUELA BELTRÁN | 2023 - Actual</div>
+                </div>
+                <div class="education-item">
+                    <div class="education-title">Tecnólogo en Análisis y Desarrollo de Sistemas</div>
+                    <div class="education-date"><i class="fas fa-university"></i> SENA | 2021 - 2023</div>
+                    <p class="education-description">
+                        Especializado en desarrollo de software, bases de datos y metodologías ágiles. 
+                        Proyecto final: Sistema de gestión para PYMEs desarrollado en Java y MySQL.
+                    </p>
+                </div>
+            </div>
+
+            <div class="skills">
+                <h3><i class="fas fa-code" style="margin-right: 10px;"></i> HABILIDADES TÉCNICAS</h3>
+                <ul>
+                    <li><i class="fas fa-check" style="margin-right: 5px;"></i> Java</li>
+                    <li><i class="fas fa-check" style="margin-right: 5px;"></i> MySQL</li>
+                    <li><i class="fas fa-check" style="margin-right: 5px;"></i> HTML/CSS</li>
+                    <li><i class="fas fa-check" style="margin-right: 5px;"></i> Soporte Técnico</li>
+                    <li><i class="fas fa-check" style="margin-right: 5px;"></i> Metodologías Ágiles</li>
+                    <li><i class="fas fa-check" style="margin-right: 5px;"></i> Resolución de Problemas</li>
+                    <li><i class="fas fa-check" style="margin-right: 5px;"></i> Atención al Cliente</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="right-column">
+            <div class="profile-image">
+                <img src="https://ui-avatars.com/api/?name=Camilo+González&size=200&background=random" alt="Foto de perfil">
+            </div>
+            
+            <div class="personal-details">
+                <h3 class="section-title">INFORMACIÓN PERSONAL</h3>
+                <div class="detail-item">
+                    <i class="fas fa-phone-alt"></i>
+                    <span>302 5469787</span>
+                </div>
+                <div class="detail-item">
+                    <i class="fas fa-envelope"></i>
+                    <span>camicamilo499@gmail.com</span>
+                </div>
+                <div class="detail-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Calle 76 #24-65, Bogotá</span>
+                </div>
+                <div class="detail-item">
+                    <i class="fas fa-id-card"></i>
+                    <span>1.000.320.621</span>
+                </div>
+                
+                <h3 class="section-title">IDIOMAS</h3>
+                <div class="language-item">
+                    <span class="language-name">Español</span>
+                    <div class="language-level">
+                        <div class="dot filled"></div>
+                        <div class="dot filled"></div>
+                        <div class="dot filled"></div>
+                        <div class="dot filled"></div>
+                        <div class="dot filled"></div>
+                    </div>
+                </div>
+                <div class="language-item">
+                    <span class="language-name">Inglés</span>
+                    <div class="language-level">
+                        <div class="dot filled"></div>
+                        <div class="dot filled"></div>
+                        <div class="dot filled"></div>
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                    </div>
+                </div>
+                
+                <h3 class="section-title">COMPETENCIAS</h3>
+                <div class="skills">
+                    <ul style="flex-direction: column; gap: 8px;">
+                        <li style="background: transparent; border: 1px solid white; color: white; padding: 5px 10px;">Trabajo en equipo</li>
+                        <li style="background: transparent; border: 1px solid white; color: white; padding: 5px 10px;">Proactividad</li>
+                        <li style="background: transparent; border: 1px solid white; color: white; padding: 5px 10px;">Aprendizaje rápido</li>
+                        <li style="background: transparent; border: 1px solid white; color: white; padding: 5px 10px;">Resolución de problemas</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="signature">
+                <p>Firmado digitalmente</p>
+                <div style="font-family: 'Dancing Script', cursive; font-size: 18px; margin-top: 5px;">Camilo González</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
