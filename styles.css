@@ -6,6 +6,7 @@
     --dark-color: #2c3e50;
     --text-color: #333;
     --text-light: #fff;
+    --profile-bg-color: #232E31; /* Nuevo color específico para el perfil */
 }
 
 body {
@@ -61,7 +62,7 @@ body {
     overflow: hidden;
     border: 6px solid var(--secondary-color);
     box-shadow: 0 8px 25px rgba(0,0,0,0.2);
-    background-color: #191716;
+    background-color: var(--profile-bg-color); /* Color actualizado */
 }
 
 .profile-image {
@@ -69,13 +70,15 @@ body {
     height: 100%;
     object-fit: cover;
     object-position: center top;
-    transform: scale(0.9);
+    transform: scale(1.05);
     transition: transform 0.3s ease;
+    background-color: var(--profile-bg-color); /* Fondo adicional para la imagen */
 }
 
 .profile-image-container:hover .profile-image {
-    transform: scale(0.95);
+    transform: scale(1.1);
 }
+
 
 h1, h2, h3 {
     font-family: "Special Gothic Expanded One", sans-serif;
