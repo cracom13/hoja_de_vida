@@ -90,14 +90,26 @@
           },
           {
             "@context": "https://schema.org",
-            "@type": "SoftwareApplication",
-            "name": "Sistema de Soporte Técnico",
+            "@type": "Occupation",
+            "name": "Desarrollador de Sistemas de Soporte Técnico",
             "description": "Sistema desarrollado durante mi experiencia en HELISA CLOUD para gestionar tickets de soporte técnico.",
-            "creator": {
-              "@type": "Person",
-              "name": "Camilo Andrés González"
+            "skills": ["Java", "MySQL", "Soporte técnico", "Gestión de tickets"],
+            "occupationLocation": {
+              "@type": "Place",
+              "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Bogotá",
+                "addressCountry": "CO"
+              }
             },
-            "applicationCategory": "BusinessApplication"
+            "startDate": "2022-01-01",
+            "endDate": "2023-01-01",
+            "worksFor": {
+              "@type": "Organization",
+              "name": "HELISA CLOUD",
+              "description": "Empresa especializada en soluciones cloud y soporte técnico"
+            },
+            "responsibilities": "Desarrollo y mantenimiento de sistema de gestión de tickets de soporte técnico"
           }
         ]
         </script>
@@ -188,15 +200,22 @@
                 </div>
             </div>
             
-            <div class="case-study-card" itemprop="creator" itemscope itemtype="http://schema.org/CreativeWork">
+            <div class="case-study-card" itemscope itemtype="http://schema.org/Occupation">
                 <div class="case-study-image" style="background-image: url('https://videos.openai.com/vg-assets/assets%2Ftask_01jtntdajde6evmsb7zbt9p6hp%2F1746636624_img_2.webp?st=2025-05-07T15%3A44%3A21Z&se=2025-05-13T16%3A44%3A21Z&sks=b&skt=2025-05-07T15%3A44%3A21Z&ske=2025-05-13T16%3A44%3A21Z&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skoid=8ebb0df1-a278-4e2e-9c20-f2d373479b3a&skv=2019-02-02&sv=2018-11-09&sr=b&sp=r&spr=https%2Chttp&sig=wUecmfZerTiJqV28uiA3u5qkuho5rrFWGz%2FFfVrEqHM%3D&az=oaivgprodscus')"></div>
                 <div class="case-study-content">
-                    <h3 itemprop="name">Sistema de Soporte Técnico</h3>
-                    <p itemprop="description">Sistema desarrollado durante mi experiencia en HELISA CLOUD para gestionar tickets de soporte técnico.</p>
-                    <a href="#" class="view-case">Ver proyecto <i class="fas fa-arrow-right"></i></a>
+                    <h3 itemprop="name">Sistema de Soporte Técnico - HELISA CLOUD</h3>
+                    <p itemprop="description">Desarrollé un sistema para gestionar tickets de soporte técnico durante mi experiencia en HELISA CLOUD.</p>
+                    <div itemprop="skills" itemscope itemtype="http://schema.org/ItemList">
+                        <meta itemprop="name" content="Habilidades utilizadas">
+                        <span itemprop="itemListElement">Java</span>,
+                        <span itemprop="itemListElement">MySQL</span>,
+                        <span itemprop="itemListElement">Soporte técnico</span>
+                    </div>
+                    <meta itemprop="occupationLocation" content="Bogotá, Colombia">
+                    <meta itemprop="startDate" content="2022-01-01">
+                    <a href="#" class="view-case">Ver detalles <i class="fas fa-arrow-right"></i></a>
                 </div>
             </div>
-        </div>
     </section>
     
     <section class="contact-section" itemscope itemtype="http://schema.org/Person">
