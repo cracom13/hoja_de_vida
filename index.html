@@ -1,13 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-M9K7CWR6');</script>
-<!-- End Google Tag Manager -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portafolio - Camilo González</title>
@@ -16,9 +9,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Finlandica:ital,wght@0,400..700;1,400..700&family=Special+Gothic+Expanded+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/styles.css">
 
-    
+    <!-- Microdatos Schema.org -->
     <!-- Microdatos Schema.org para persona -->
 <script type="application/ld+json">
     {
@@ -59,7 +52,7 @@
     }
     </script>
     
-    <!-- Microdatos para proyectos  -->
+    <!-- Microdatos para proyectos corregidos -->
     <script type="application/ld+json">
     [
       {
@@ -96,7 +89,7 @@
     ]
     </script>
     
-    <!-- Microdatos para experiencia laboral -->
+    <!-- Microdatos para experiencia laboral corregidos -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -123,16 +116,11 @@
         "startDate": "2022-01-01",
         "endDate": "2023-01-01"
       },
-      "image": "https://videos.openai.com/vg-assets/assets%2Ftask_01jtntdajde6evmsb7zbt9p6hp%2F1746636624_img_2.webp"
+      "image": "img/foto_de_perfil.png"
     }
     </script>
 </head>
 <body>
-    <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M9K7CWR6"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
-    
     <section class="hero">
         <div class="hero-container">
             <div class="hero-text">
@@ -141,7 +129,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <a href="#case-studies" class="cta-button">Ver mis proyectos</a>
             </div>
             <div class="profile-image-container">
-                <img src="https://videos.openai.com/vg-assets/assets%2Ftask_01jtnkd21xekpvqxt6ykrjkyqv%2F1746629333_img_1.webp?st=2025-05-07T17%3A26%3A09Z&se=2025-05-13T18%3A26%3A09Z&sks=b&skt=2025-05-07T17%3A26%3A09Z&ske=2025-05-13T18%3A26%3A09Z&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skoid=8ebb0df1-a278-4e2e-9c20-f2d373479b3a&skv=2019-02-02&sv=2018-11-09&sr=b&sp=r&spr=https%2Chttp&sig=aVMd7%2BdcZu7NyWvxI2DU9jC0VThuxP4XBREn1gVYJe0%3D&az=oaivgprodscus" alt="Foto de perfil de Camilo González" class="profile-image">
+                <img src="img/foto_de_perfil.png" alt="Foto de perfil de Camilo González" class="profile-image">
             </div>
         </div>
     </section>
@@ -158,7 +146,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <section class="skills">
         <div class="container">
-            <h2>Mis Habilidades</h2>
+            <h2>MIS HABILIDADES</h2>
             <div class="skills-grid">
                 <div class="skill-card">
                     <h3>Responsive design</h3>
@@ -200,7 +188,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <h2>Proyectos Destacados</h2>
         <div class="case-study-grid">
             <div class="case-study-card">
-                <div class="case-study-image" style="background-image: url('https://videos.openai.com/vg-assets/assets%2Ftask_01jtnphqfxek4sbx1h86qc2b9r%2F1746632603_img_1.webp?st=2025-05-07T15%3A41%3A33Z&se=2025-05-13T16%3A41%3A33Z&sks=b&skt=2025-05-07T15%3A41%3A33Z&ske=2025-05-13T16%3A41%3A33Z&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skoid=8ebb0df1-a278-4e2e-9c20-f2d373479b3a&skv=2019-02-02&sv=2018-11-09&sr=b&sp=r&spr=https%2Chttp&sig=6lgR%2BMYGD5IP1Rvv80N6WuaiHd%2Fa6FCXFAto0nygBEc%3D&az=oaivgprodscus')"></div>
+                <div class="case-study-image" style="background-image: url('img/Inventario.png')"></div>
                 <div class="case-study-content">
                     <h3>Sistema de gestión para PYMEs</h3>
                     <p>Proyecto final del SENA desarrollado en Java y MySQL que permite a las pequeñas empresas gestionar inventario, ventas y clientes.</p>
@@ -209,7 +197,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </div>
             
             <div class="case-study-card">
-                <div class="case-study-image" style="background-image: url('https://videos.openai.com/vg-assets/assets%2Ftask_01jtnscnvsed79amczwkmadyr1%2F1746635570_img_1.webp?st=2025-05-07T14%3A55%3A46Z&se=2025-05-13T15%3A55%3A46Z&sks=b&skt=2025-05-07T14%3A55%3A46Z&ske=2025-05-13T15%3A55%3A46Z&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skoid=8ebb0df1-a278-4e2e-9c20-f2d373479b3a&skv=2019-02-02&sv=2018-11-09&sr=b&sp=r&spr=https%2Chttp&sig=Ehhg5s8vhgpQq9U5uw3UcqKJUafo1yME%2BEIFv1wV7I0%3D&az=oaivgprodscus')"></div>
+                <div class="case-study-image" style="background-image: url('img/portafolio.png')"></div>
                 <div class="case-study-content">
                     <h3>Portafolio Personal</h3>
                     <p>Sitio web personal desarrollado con HTML, CSS y JavaScript para mostrar mis proyectos y habilidades.</p>
@@ -218,7 +206,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </div>
             
             <div class="case-study-card">
-                <div class="case-study-image" style="background-image: url('https://videos.openai.com/vg-assets/assets%2Ftask_01jtntdajde6evmsb7zbt9p6hp%2F1746636624_img_2.webp?st=2025-05-07T15%3A44%3A21Z&se=2025-05-13T16%3A44%3A21Z&sks=b&skt=2025-05-07T15%3A44%3A21Z&ske=2025-05-13T16%3A44%3A21Z&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skoid=8ebb0df1-a278-4e2e-9c20-f2d373479b3a&skv=2019-02-02&sv=2018-11-09&sr=b&sp=r&spr=https%2Chttp&sig=wUecmfZerTiJqV28uiA3u5qkuho5rrFWGz%2FFfVrEqHM%3D&az=oaivgprodscus')"></div>
+                <div class="case-study-image" style="background-image: url('img/Soporte_Tecnico_Caricaturesco.png')"></div>
                 <div class="case-study-content">
                     <h3>Sistema de Soporte Técnico - HELISA CLOUD</h3>
                     <p>Desarrollé un sistema para gestionar tickets de soporte técnico durante mi experiencia en HELISA CLOUD.</p>
@@ -242,7 +230,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <p>Apasionado por la resolución de problemas y el trabajo en equipo, con habilidades técnicas sólidas y capacidad para aprender rápidamente nuevas tecnologías.</p>
                 
                 <div class="github-link">
-                    <a href="https://github.com/cracom13" target="_blank" rel="noopener noreferrer" aria-label="Visita mi perfil de GitHub">
+                    <a href="https://github.com/tu-usuario" target="_blank" rel="noopener noreferrer" aria-label="Visita mi perfil de GitHub">
                         <i class="fab fa-github"></i> Visita mi GitHub
                     </a>
                 </div>
