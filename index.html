@@ -221,6 +221,116 @@
             </div>
         </div>
     </section>
+     <section class="banners-section">
+        <div class="container">
+            <h2>Recomendaciones y Colaboraciones</h2>
+            <div class="banners-grid">
+                <!-- Banner de Felipe Tabares -->
+                <div class="reference-banner">
+                    <a href="https://cv-felipetabares.xyz/" class="felipe-banner-ref" target="_blank">
+                        <div class="felipe-banner-corner"></div>
+                        <div class="felipe-banner-title">PORTAFOLIO PROFESIONAL</div>
+                        <div class="felipe-banner-subtitle">
+                            <span class="felipe-banner-highlight">Felipe Tabares</span> · Software Engineer & Smart Contract Developer. Descubre mis proyectos, experiencia y soluciones blockchain.
+                        </div>
+                        <div class="felipe-banner-cta">
+                            Ver portafolio <i class="fas fa-arrow-right"></i>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Espacio para futuros banners -->
+                <div class="reference-banner placeholder">
+                    <p>Próximamente más colaboraciones</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<style>
+        /* Estilos para la nueva sección */
+        .banners-section {
+            background-color: var(--light-color);
+            padding: 60px 20px;
+        }
+
+        .banners-section h2 {
+            text-align: center;
+            font-family: "Special Gothic Expanded One", sans-serif;
+            font-size: 2rem;
+            margin-bottom: 40px;
+            color: var(--primary-color);
+        }
+
+        .banners-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .reference-banner {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .reference-banner:hover {
+            transform: translateY(-5px);
+        }
+
+        .reference-banner.placeholder {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 200px;
+            background-color: rgba(255,255,255,0.7);
+            border: 2px dashed var(--secondary-color);
+        }
+
+        /* Estilos del banner de Felipe (adaptados para integración) */
+        .felipe-banner-ref {
+            font-family: 'Lato', sans-serif;
+            background: linear-gradient(135deg, #e3f1f7 0%, #24788f 100%);
+            color: #1a1a1a;
+            padding: 25px;
+            border-radius: 8px;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(36,120,143,0.1);
+            display: block;
+            text-decoration: none;
+            height: 100%;
+            min-height: 200px;
+        }
+
+        .felipe-banner-title {
+            font-family: 'Special Gothic Expanded One', sans-serif;
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: #1a2634;
+        }
+
+        .felipe-banner-subtitle {
+            font-size: 1rem;
+            margin-bottom: 15px;
+            color: #223047;
+        }
+
+        .felipe-banner-cta {
+            color: #24788f;
+            font-weight: 600;
+        }
+
+        @media (max-width: 768px) {
+            .banners-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
     
     <section class="contact-section">
         <div class="contact-container">
@@ -230,7 +340,7 @@
                 <p>Apasionado por la resolución de problemas y el trabajo en equipo, con habilidades técnicas sólidas y capacidad para aprender rápidamente nuevas tecnologías.</p>
                 
                 <div class="github-link">
-                    <a href="https://github.com/cracom13" target="_blank" rel="noopener noreferrer" aria-label="Visita mi perfil de GitHub">
+                    <a href="https://github.com/tu-usuario" target="_blank" rel="noopener noreferrer" aria-label="Visita mi perfil de GitHub">
                         <i class="fab fa-github"></i> Visita mi GitHub
                     </a>
                 </div>
