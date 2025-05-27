@@ -6,15 +6,81 @@
   --dark-color: #2c3e50;
   --text-color: #333;
   --text-light: #fff;
+  --text-gray: #666; /* Color gris para párrafos */
   --profile-bg-color: #232E31;
 }
 
 body {
-  font-family: "Finlandica", sans-serif;
+  font-family: "Rethink Sans", sans-serif;
   margin: 0;
   padding: 0;
   color: var(--text-color);
   line-height: 1.6;
+  font-weight: bold; /* Regresando a bold para Rethink Sans */
+  font-size: 1rem;
+}
+
+p, .unified-paragraph, .news-excerpt, .modal-text p, .about-text p, 
+.skill-card p, .case-study-content p, .contact-info p, 
+.form-group input, .form-group textarea, .submit-btn, .placeholder, .h3-text {
+  font-family: "Rethink Sans", sans-serif;
+}
+
+.contact-form {
+  font-family: "Rethink Sans", sans-serif;
+}
+
+.contact-form h2 {
+  font-family: "Rethink Sans", sans-serif;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-top: 0;
+  margin-bottom: 30px;
+}
+
+.form-group input,
+.form-group textarea {
+  font-family: "Rethink Sans", sans-serif;
+  font-weight: 600;
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+/* Placeholders */
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  font-family: "Rethink Sans", sans-serif;
+  font-weight: 600;
+  color: #999;
+  opacity: 1; /* Asegurar que Firefox muestre el color correctamente */
+}
+
+/* Clase para texto semi-bold cuando sea necesario */
+.semi-bold {
+  font-weight: 500; /* Reducido de 600 a 500 */
+}
+
+/* Clase para texto normal/regular */
+.regular {
+  font-weight: 400;
+}
+
+/* Clase para texto bold solo cuando sea necesario */
+.bold {
+  font-weight: 600;
+}
+
+.unified-paragraph {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+    white-space: pre-line;
+    font-weight: bold;
+    color: white; /* Color blanco para sección "Sobre mí" */
 }
 
 .sr-only {
@@ -43,15 +109,466 @@ body {
 
 .hero-container {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 60px;
+  gap: 40px;
   max-width: 1200px;
   margin: 0 auto;
 }
 
 .hero-text {
-  flex: 1;
+  width: 100%;
+  text-align: center;
+}
+
+/* ========================================
+   ESTILOS DE NAVEGACIÓN UNIFICADOS
+   ======================================== */
+
+/* Barra de navegación principal estática */
+.integrated-header {
+    padding: 100px 0 60px;
+    position: relative;
+    background: linear-gradient(135deg, var(--primary-color) 0%, #2C3E50 100%);
+    color: white;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* Contenedor de navegación estático con color azul oscuro */
+/* Contenedor de navegación con fondo más oscuro y compacto */
+.nav-container {
+    margin: 0 auto 40px;
+    max-width: 1200px;
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px; /* Reducido de 20px a 8px */
+    padding: 4px 12px; /* Reducido el padding vertical y horizontal */
+    background-color: rgba(0, 0, 0, 0.6); /* Fondo más oscuro */
+    border-radius: 30px; /* Más compacto */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    width: fit-content;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
+    border: 1px solid rgba(255, 255, 255, 0.1); /* Borde más sutil */
+}
+
+/* Botones de navegación más compactos con texto blanco */
+.nav-btn, .noticias-btn {
+    color: white; /* Texto blanco */
+    text-decoration: none;
+    font-family: "Rethink Sans", sans-serif;
+    font-weight: 500;
+    padding: 8px 16px; /* Padding más compacto */
+    border-radius: 20px; /* Border radius más pequeño */
+    transition: all 0.3s ease;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 0.9rem; /* Texto ligeramente más pequeño */
+    position: relative;
+    text-align: center; /* Asegurar centrado del texto */
+}
+
+/* Hover con fondo blanco semi-transparente */
+.nav-btn:hover, .noticias-btn:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+    transform: translateY(-1px); /* Sutil efecto de elevación */
+}
+
+/* Estado activo con fondo más visible */
+.nav-btn.active, .noticias-btn.active {
+    background-color: rgba(255, 255, 255, 0.25);
+    font-weight: 600;
+    color: white; /* Mantener texto blanco en estado activo */
+}
+
+/* Ajustes responsivos */
+@media (max-width: 768px) {
+    
+    
+    
+}
+
+@media (max-width: 480px) {
+   
+    
+    
+}
+
+@media (max-width: 1024px) {
+    .products-grid {
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 25px;
+    }
+}
+
+@media (max-width: 768px) {
+   
+    
+    .header-content h1 {
+        font-size: 2.2rem; /* Reducir tamaño en móvil */
+    }
+    
+    .products-container {
+        padding: 30px 15px; /* Menos padding en móvil */
+    }
+}
+
+
+
+/* Contenido del header */
+.header-content {
+   padding-top: 30px;
+   position: relative;
+    z-index: 1;
+}
+
+.header-content h1 {
+    font-family: "Special Gothic Expanded One", sans-serif;
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    font-weight: 400;
+}
+
+.header-content p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* Navegación flotante alternativa (si la necesitas) */
+.floating-nav {
+    position: absolute;
+    top: 20px;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.floating-nav .nav-container {
+    background-color: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-radius: 50px;
+    padding: 8px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    display: inline-flex;
+    gap: 4px;
+}
+
+  .products-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px; /* Cambié de "0 20px" a "40px 20px" */
+}
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        .product-card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .product-image {
+            height: 200px;
+            background-size: cover;
+            background-position: center;
+            background-color: #f0f0f0;
+        }
+
+        .product-content {
+            padding: 20px;
+        }
+
+        .product-title {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: var(--primary-color);
+        }
+
+        .product-price {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--accent-color);
+            margin-bottom: 15px;
+        }
+
+        .product-description {
+            color: var(--text-gray);
+            margin-bottom: 20px;
+            line-height: 1.5;
+            font-size: 0.95rem;
+        }
+
+        .amazon-btn {
+            display: inline-block;
+            background-color: #FF9900;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            font-size: 0.9rem;
+        }
+
+        .amazon-btn:hover {
+            background-color: #e68a00;
+            transform: translateY(-2px);
+        }
+
+        .amazon-btn i {
+            margin-right: 8px;
+        }
+
+
+
+/* Estilos responsivos para la navegación */
+@media (max-width: 768px) {
+    
+
+    
+   
+    
+    .header-content h1 {
+        font-size: 2rem;
+    }
+    
+    .header-content p {
+        font-size: 1.1rem;
+        padding: 0 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-container {
+        justify-content: center;
+        max-width: 90%;
+        border-radius: 30px;
+        gap: 10px;
+        padding: 4px 10px;
+    }
+    /* nav container que se ajusta para dispositivos móviles */
+    
+    .nav-btn, .noticias-btn {
+        padding: 4px 12px;
+        font-size: 0.8rem;
+    }
+    /* nav boton que se ajusta para dispositivos móviles */
+    
+    .header-content h1 {
+        font-size: 1.8rem;
+    }
+    
+    .header-content p {
+        font-size: 1rem;
+    }
+    
+    .integrated-header {
+        padding: 15px 0 60px;
+    }
+}
+
+.news-header {
+    background-color: var(--primary-color); /* Usa tu variable azul */
+    color: white;
+    padding: 100px 20px 60px; /* Más padding arriba para espacio con navbar */
+    text-align: center;
+    margin-bottom: 40px;
+    width: 100%;
+    position: relative;
+}
+
+/* Eliminar cualquier espacio blanco alrededor */
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* Título principal con Special Gothic Expanded One */
+.news-header h1 {
+    font-family: "Special Gothic Expanded One", sans-serif;
+    font-size: 3rem;
+    margin-bottom: 15px;
+    color: white;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Subtítulo con Rethink Sans */
+.news-header p {
+    font-family: "Rethink Sans", sans-serif;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.9);
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* Títulos de las tarjetas de noticias con Rethink Sans */
+
+
+/* Ajuste para la barra de navegación */
+
+
+
+
+.news-date {
+    font-weight: bold;
+  line-height: 1.6;
+  color: var(--text-gray);
+}
+
+/* Versión móvil - botón toggle (si lo necesitas) */
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* Contenido del header */
+.header-content {
+    padding: 2rem 1rem;
+            text-align: center;
+            margin-top: 0;
+
+}
+
+.header-content h1 {
+    font-family: "Special Gothic Expanded One", sans-serif;
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    font-weight: 400;
+}
+
+.header-content p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* Navegación flotante alternativa (si la necesitas) */
+.floating-nav {
+    position: fixed;
+    top: 20px;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    z-index: 1000;
+}
+
+
+
+ .nav-container .floating-nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding: 15px 20px;
+            background-color: rgba(0, 0, 0, 0.2);
+            border-radius: 50px;
+            backdrop-filter: blur(10px);
+            width: fit-content;
+        }
+
+.floating-nav .nav-btn {
+    color: #ffffff;
+    padding: 12px 24px;
+}
+
+/* Estilos responsivos para la navegación */
+@media (max-width: 768px) {
+   
+    
+  
+
+    
+    .header-content h1 {
+        font-size: 2rem;
+    }
+    
+    .header-content p {
+        font-size: 1.1rem;
+        padding: 0 15px;
+    }
+}
+
+@media (max-width: 480px) {
+ 
+    
+    
+    
+    .header-content h1 {
+        font-size: 1.8rem;
+    }
+    
+    .header-content p {
+        font-size: 1rem;
+    }
+    
+    .integrated-header {
+        padding: 15px 0 60px;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .integrated-header {
+        padding: 80px 0 40px;
+    }
+    
+    .header-content {
+        padding-top: 40px;
+    }
+}
+
+@media (max-width: 480px) {
+    .integrated-header {
+        padding: 70px 0 30px;
+    }
+    
+    .header-content {
+        padding-top: 30px;
+    }
+}
+
+/* Versión móvil - botón toggle (si lo necesitas) */
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
 }
 
 .profile-image-container {
@@ -63,6 +580,7 @@ body {
   border: 6px solid var(--secondary-color);
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
   background-color: var(--profile-bg-color);
+  margin: 0 auto;
 }
 
 .profile-image {
@@ -86,12 +604,14 @@ h1, h2, h3 {
 .hero h1 {
   font-size: 3rem;
   margin-bottom: 20px;
+  font-weight: 400; /* Menos peso para el título principal */
 }
 
 .hero p {
   font-size: 1.2rem;
   max-width: 700px;
   margin: 0 auto 30px;
+  font-weight: bold; /* Bold para Rethink Sans */
 }
 
 .cta-button {
@@ -101,7 +621,7 @@ h1, h2, h3 {
   padding: 12px 30px;
   text-decoration: none;
   border-radius: 30px;
-  font-weight: bold;
+  font-weight: 500; /* Reducido de bold */
   transition: all 0.3s ease;
 }
 
@@ -131,6 +651,13 @@ h1, h2, h3 {
 
 .about-text {
   flex: 1;
+}
+
+.about-text p {
+  font-weight: bold;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: var(--text-gray); /* Color gris para párrafos */
 }
 
 .skills {
@@ -173,10 +700,14 @@ h1, h2, h3 {
   color: var(--secondary-color);
   margin-bottom: 15px;
   font-size: 1.5rem;
+  font-weight: 500; /* Menos peso en títulos de habilidades */
 }
 
 .skill-card p {
   margin: 0;
+  font-weight: bold;
+  line-height: 1.6;
+  color: var(--text-gray); /* Color gris para párrafos */
 }
 
 .tech-icons {
@@ -228,13 +759,20 @@ h1, h2, h3 {
 .case-study-content h3 {
   margin-top: 0;
   color: var(--primary-color);
+  font-weight: 500; /* Menos peso */
+}
+
+.case-study-content p {
+  font-weight: bold;
+  line-height: 1.6;
+  color: var(--text-gray); /* Color gris para párrafos */
 }
 
 .view-case {
   display: inline-block;
   color: var(--secondary-color);
   text-decoration: none;
-  font-weight: bold;
+  font-weight: 500; /* Reducido de bold */
   margin-top: 15px;
 }
 
@@ -256,6 +794,28 @@ h1, h2, h3 {
   padding-right: 40px;
 }
 
+.about-me h2 {
+  font-weight: 400; /* Menos peso en títulos */
+}
+.contact-form {
+  max-width: 600px; /* Ancho máximo para el formulario */
+  margin: 0 auto; /* Centrar horizontalmente */
+  width: 100%; /* Asegurar que ocupe el ancho disponible */
+}
+
+.form-group {
+  text-align: center; /* Centrar el texto de las etiquetas */
+}
+
+.form-group input,
+.form-group textarea {
+  max-width: 400px; /* Ancho máximo para los inputs */
+  margin: 0 auto; /* Centrar los inputs */
+  display: block; /* Necesario para que margin:auto funcione */
+}
+
+
+
 .contact-form {
   background-color: white;
   padding: 40px;
@@ -268,17 +828,16 @@ h1, h2, h3 {
   color: var(--primary-color);
   margin-top: 0;
   margin-bottom: 30px;
+  font-weight: 400; /* Menos peso */
 }
+
+
 
 .form-group {
   margin-bottom: 25px;
 }
 
-.form-group label {
-  display: block;
-  margin-bottom: 8px;
-  font-weight: bold;
-}
+
 
 .form-group input,
 .form-group textarea {
@@ -288,11 +847,13 @@ h1, h2, h3 {
   border-radius: 5px;
   font-family: inherit;
   font-size: 1rem;
+  font-weight: bold; /* Bold para Rethink Sans */
 }
 
 .form-group textarea {
   height: 120px;
   resize: vertical;
+  min-height: 80px;
 }
 
 .submit-btn {
@@ -301,7 +862,7 @@ h1, h2, h3 {
   border: none;
   padding: 12px 30px;
   border-radius: 30px;
-  font-weight: bold;
+  font-weight: 500; /* Reducido de bold */
   cursor: pointer;
   transition: all 0.3s ease;
   font-size: 1rem;
@@ -316,10 +877,15 @@ h1, h2, h3 {
   margin-top: 30px;
 }
 
+.contact-info h3 {
+  font-weight: 400; /* Menos peso */
+}
+
 .contact-info p {
   margin-bottom: 15px;
   display: flex;
   align-items: center;
+  font-weight: bold; /* Bold para Rethink Sans */
 }
 
 .contact-info i {
@@ -345,7 +911,7 @@ h1, h2, h3 {
   gap: 10px;
   color: var(--secondary-color);
   text-decoration: none;
-  font-weight: bold;
+  font-weight: 500; /* Reducido de bold */
   transition: all 0.3s ease;
 }
 
@@ -358,10 +924,273 @@ h1, h2, h3 {
   font-size: 1.5rem;
 }
 
+/* Estilos adicionales para mejorar la tipografía */
+.skills-used, .employment-dates {
+  font-weight: bold;
+  margin-top: 10px;
+  font-size: 0.9rem;
+  color: var(--text-gray); /* Color gris para párrafos */
+  font-family: 'Rethink Sans', sans-serif;
+}
+
+.skills-used strong, .employment-dates strong {
+  font-weight: bold;
+  color: var(--text-color);
+  font-family: 'Rethink Sans', sans-serif; /* Mantener color normal para strong */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.news-header {
+    background-color: #2c3e50;
+    color: white;
+    padding: 60px 0;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.news-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    margin: 40px 0;
+}
+
+.news-card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+/* Solo aplicar hover cuando NO hay modal activo */
+.news-card:not(.modal-open):hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.news-image {
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+}
+
+.news-content {
+    padding: 20px;
+}
+
+.news-content h3 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    color: #2c3e50;
+}
+
+.news-date {
+    color: #7f8c8d;
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+}
+
+.news-excerpt {
+    color: #555;
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.view-more {
+    background: #3498db;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background 0.3s ease;
+}
+
+.view-more:hover {
+    background: #2980b9;
+}
+
+/* Modal Styles */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.modal-overlay.active {
+    display: flex;
+    opacity: 1;
+}
+
+.modal-container {
+    width: 90%;
+    max-width: 700px;
+    max-height: 80vh;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    transform: scale(0.9);
+    transition: transform 0.3s ease;
+}
+
+.modal-overlay.active .modal-container {
+    transform: scale(1);
+}
+
+.modal-image {
+    height: 250px;
+    background-size: cover;
+    background-position: center;
+    flex-shrink: 0;
+}
+
+.modal-content {
+    padding: 25px;
+    overflow-y: auto;
+    flex: 1;
+    color: #2c3e50;
+}
+
+.modal-content h3 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: #2c3e50;
+}
+
+.modal-content .news-date {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    color: #7f8c8d;
+}
+
+.modal-text p {
+    margin-bottom: 15px;
+    line-height: 1.7;
+    color: #34495e;
+}
+
+.close-modal {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: rgba(231, 76, 60, 0.9);
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    z-index: 10;
+    font-size: 0.9rem;
+    transition: background 0.3s ease;
+}
+
+.close-modal:hover {
+    background: rgba(192, 57, 43, 0.95);
+}
+
+/* Deshabilitar hover effects cuando hay modal abierto */
+body.modal-active .news-card {
+    pointer-events: none;
+}
+
+body.modal-active .modal-overlay {
+    pointer-events: all;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .modal-container {
+        width: 95%;
+        max-height: 85vh;
+    }
+
+    .modal-image {
+        height: 200px;
+    }
+
+    .modal-content {
+        padding: 20px;
+    }
+
+    .modal-content h3 {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .expanded-container {
+        width: 98%;
+        max-height: 95vh;
+    }
+
+    .expanded-image {
+        height: 180px;
+    }
+
+    .expanded-content {
+        padding: 15px;
+        max-height: calc(95vh - 180px - 60px);
+    }
+
+    .expanded-content h3 {
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+    }
+
+    .expanded-text p {
+        font-size: 1rem;
+        margin-bottom: 15px;
+    }
+}
+
+
+
 @media (max-width: 768px) {
   .hero-container {
-    flex-direction: column-reverse;
-    gap: 40px;
+    flex-direction: column;
+    gap: 30px;
   }
   .about-content {
     flex-direction: column;
@@ -377,6 +1206,21 @@ h1, h2, h3 {
     padding-right: 0;
   }
 }
+
+@media (max-width: 768px) {
+  .contact-form {
+    padding: 40px;
+    margin-bottom: 30px;
+    font-size: rem(1); /* Tamaño de fuente más pequeño */
+  }
+
+  .form-group input,
+  .form-group textarea {
+    width: 100%;
+    min-width: 80px;
+  }
+}
+
 @media (max-width: 480px) {
   .profile-image-container {
     width: 220px;
@@ -384,6 +1228,28 @@ h1, h2, h3 {
   }
   .hero h1 {
     font-size: 2.2rem;
+  }
+  .nav-menu {
+    position: fixed;
+    top: 70px;
+    left: -100%;
+    flex-direction: column;
+    background-color: var(--nav-bg-color);
+    width: 100%;
+    text-align: center;
+    transition: left 0.3s ease;
+    padding: 1rem 0;
+    gap: 1rem;
+  }
+  
+  .nav-menu.active {
+    left: 0;
+  }
+  
+ 
+  
+  .nav-link::after {
+    display: none;
   }
 }
 
