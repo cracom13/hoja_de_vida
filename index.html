@@ -14,8 +14,7 @@
     <script src="js/email.js" defer></script>
 
     <!-- Microdatos Schema.org -->
-    <!-- Microdatos Schema.org para persona -->
-<script type="application/ld+json">
+    <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "Person",
@@ -54,7 +53,6 @@
     }
     </script>
     
-    <!-- Microdatos para proyectos corregidos -->
     <script type="application/ld+json">
     [
       {
@@ -91,7 +89,6 @@
     ]
     </script>
     
-    <!-- Microdatos para experiencia laboral corregidos -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -131,31 +128,23 @@
                 <h1>CAMILO ANDRÉS GONZÁLEZ</h1>
                 <p>Tecnólogo en Desarrollo de Sistemas | Ingeniero de Software en formación</p>
                 
-                <!-- Nueva barra de navegación con botones -->
-               
-            <div class="profile-image-container">
-                <img src="img/foto_de_perfil.webp" alt="Foto de perfil de Camilo González" class="profile-image">
+                <div class="profile-image-container">
+                    <img src="img/foto_de_perfil.webp" alt="Foto de perfil de Camilo González" class="profile-image">
+                </div>
             </div>
-          
         </div>
- <nav class="floating-nav">
-    <div class="nav-container">
-        <!-- Enlace al inicio de la página -->
-        <a href="/" class="nav-btn">Portafolio</a>
         
-        <!-- Enlace a sección Proyectos con hash pero con evento personalizado -->
-        <a href="#projects" class="nav-btn" id="projects-link">Ver Proyectos</a>
-        
-        <!-- Enlace a página de noticias -->
-        <a href="news.html" class="noticias-btn">Noticias</a>
-        
-        <!-- Enlace a página de productos -->
-        <a href="products.html" class="nav-btn">Productos</a>
-    </div>
-</nav>
-             
+        <nav class="floating-nav">
+            <div class="nav-container">
+                <a href="#" class="nav-btn" id="home-link">Portafolio</a>
+                <a href="#projects" class="nav-btn" id="projects-link">Ver Proyectos</a>
+                <a href="news.html" class="noticias-btn">Noticias</a>
+                <a href="products.html" class="nav-btn">Productos</a>
+            </div>
+        </nav>
     </section>
     </header>
+    
     <section class="about">
         <h2>Desarrollando soluciones tecnológicas</h2>
         <div class="about-content">
@@ -214,7 +203,6 @@
                 <div class="case-study-content">
                     <h3>Sistema de gestión para PYMEs</h3>
                     <p>Proyecto final del SENA desarrollado en Java y MySQL que permite a las pequeñas empresas gestionar inventario, ventas y clientes.</p>
-                    
                 </div>
             </div>
             
@@ -223,7 +211,6 @@
                 <div class="case-study-content">
                     <h3>Portafolio Personal</h3>
                     <p>Sitio web personal desarrollado con HTML, CSS y JavaScript para mostrar mis proyectos y habilidades.</p>
-                   
                 </div>
             </div>
             
@@ -238,7 +225,6 @@
                     <div class="employment-dates">
                         <strong>Periodo:</strong> Enero 2022 - Enero 2023
                     </div>
-                    
                 </div>
             </div>
         </div>
@@ -249,8 +235,8 @@
             <div class="about-me">
                 <h2>Sobre mí</h2>
                 <p class="unified-paragraph">
-            Tecnólogo en Análisis y Desarrollo de Sistemas de Información con experiencia en soporte técnico y atención al cliente. Actualmente cursando Ingeniería de Software. Apasionado por la resolución de problemas y el trabajo en equipo, con habilidades técnicas sólidas y capacidad para aprender rápidamente nuevas tecnologías.
-            </p>
+                    Tecnólogo en Análisis y Desarrollo de Sistemas de Información con experiencia en soporte técnico y atención al cliente. Actualmente cursando Ingeniería de Software. Apasionado por la resolución de problemas y el trabajo en equipo, con habilidades técnicas sólidas y capacidad para aprender rápidamente nuevas tecnologías.
+                </p>
                 
                 <div class="github-link">
                     <a href="https://github.com/cracom13" target="_blank" rel="noopener noreferrer" aria-label="Visita mi perfil de GitHub">
@@ -269,112 +255,115 @@
                 </div>
             </div>
             
-           <div class="contact-form">
-    <h2>Contáctame</h2>
-    
-    <form id="contact-form-emailjs">
-        <div class="form-group">
-            <label for="name">Nombre</label>
-            <input type="text" id="name" name="from_name" placeholder="Tu nombre completo" required>
-        </div>
-        
-        <div class="form-group">
-            <label for="email">Email</label>
-            <input type="email" id="email" name="from_email" placeholder="tu@email.com" required>
-        </div>
-        
-        <!-- Nuevo campo de teléfono -->
-        <div class="form-group">
-            <label for="phone">Teléfono</label>
-            <input type="tel" id="phone" name="phone" placeholder="Tu número de teléfono">
-        </div>
-        
-        <div class="form-group">
-            <label for="message">Mensaje</label>
-            <textarea id="message" name="message" placeholder="Escribe tu mensaje aquí..." required></textarea>
-        </div>
-        
-        <button type="submit" class="submit-btn" id="submitBtn">
-            <span class="btn-text">Enviar</span>
-            <span class="btn-loading" style="display: none;">
-                <i class="fas fa-spinner fa-spin"></i> Enviando...
-            </span>
-        </button>
-    </form>
+            <div class="contact-form">
+                <h2>Contáctame</h2>
+                
+                <form id="contact-form-emailjs">
+                    <div class="form-group">
+                        <label for="name">Nombre</label>
+                        <input type="text" id="name" name="from_name" placeholder="Tu nombre completo" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="from_email" placeholder="tu@email.com" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone">Teléfono</label>
+                        <input type="tel" id="phone" name="phone" placeholder="Tu número de teléfono">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Mensaje</label>
+                        <textarea id="message" name="message" placeholder="Escribe tu mensaje aquí..." required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn" id="submitBtn">
+                        <span class="btn-text">Enviar</span>
+                        <span class="btn-loading" style="display: none;">
+                            <i class="fas fa-spinner fa-spin"></i> Enviando...
+                        </span>
+                    </button>
+                </form>
 
-    <div id="form-messages"></div>
-</div>
+                <div id="form-messages"></div>
+            </div>
+        </div>
     </section>
 
     <script>
-       document.addEventListener('DOMContentLoaded', function() {
-    // Manejo del enlace de proyectos
-    const projectsLink = document.getElementById('projects-link');
-    
-    projectsLink.addEventListener('click', function(e) {
-        e.preventDefault();
-        // Primero vamos al inicio de la página
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-        
-        // Luego, después de un pequeño retraso, vamos a la sección de proyectos
-        setTimeout(() => {
-            const target = document.querySelector(this.getAttribute('href'));
-            if (target) {
-                target.scrollIntoView({
-                    behavior: 'smooth'
+        document.addEventListener('DOMContentLoaded', function() {
+            // Función para manejar el scroll al inicio y luego a la sección
+            function scrollToSection(e, sectionId) {
+                e.preventDefault();
+                
+                // Primero vamos al inicio de la página
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+                
+                // Luego, después de un pequeño retraso, vamos a la sección
+                setTimeout(() => {
+                    const target = document.querySelector(sectionId);
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                    }
+                }, 500);
+            }
+            
+            // Manejo del enlace de inicio
+            const homeLink = document.getElementById('home-link');
+            homeLink.addEventListener('click', function(e) {
+                e.preventDefault();
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+            
+            // Manejo del enlace de proyectos
+            const projectsLink = document.getElementById('projects-link');
+            projectsLink.addEventListener('click', function(e) {
+                scrollToSection(e, '#projects');
+            });
+            
+            // Scroll suave para otros enlaces internos
+            document.querySelectorAll('a[href^="#"]:not(#home-link):not(#projects-link)').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    scrollToSection(e, this.getAttribute('href'));
                 });
-            }
-        }, 500); // 500ms de retraso
-    });
-
-    // Scroll suave para otros enlaces internos
-    document.querySelectorAll('a[href^="#"]:not(#projects-link)').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
-            e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
-            if (target) {
-                target.scrollIntoView({
-                    behavior: 'smooth'
+            });
+            
+            // Funcionalidad para botones de navegación
+            const navButtons = document.querySelectorAll('.nav-btn');
+            
+            navButtons.forEach(button => {
+                button.addEventListener('click', function(e) {
+                    // Remover clase active de todos los botones
+                    navButtons.forEach(btn => btn.classList.remove('active'));
+                    // Agregar clase active al botón clickeado
+                    this.classList.add('active');
                 });
-            }
+            });
+            
+            // Destacar botón activo según scroll
+            window.addEventListener('scroll', function() {
+                const sections = document.querySelectorAll('section[id]');
+                const scrollPos = window.scrollY + 100;
+                
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    const sectionHeight = section.offsetHeight;
+                    const sectionId = section.getAttribute('id');
+                    
+                    if (scrollPos >= sectionTop && scrollPos < sectionTop + sectionHeight) {
+                        navButtons.forEach(btn => btn.classList.remove('active'));
+                        const activeBtn = document.querySelector(`.nav-btn[href="#${sectionId}"]`);
+                        if (activeBtn) {
+                            activeBtn.classList.add('active');
+                        }
+                    }
+                });
+            });
         });
-    });
-
-    // Funcionalidad para botones de navegación
-    const navButtons = document.querySelectorAll('.nav-btn');
-    
-    navButtons.forEach(button => {
-        button.addEventListener('click', function(e) {
-            // Remover clase active de todos los botones
-            navButtons.forEach(btn => btn.classList.remove('active'));
-            // Agregar clase active al botón clickeado
-            this.classList.add('active');
-        });
-    });
-
-    // Destacar botón activo según scroll
-    window.addEventListener('scroll', function() {
-        const sections = document.querySelectorAll('section[id]');
-        const scrollPos = window.scrollY + 100;
-
-        sections.forEach(section => {
-            const sectionTop = section.offsetTop;
-            const sectionHeight = section.offsetHeight;
-            const sectionId = section.getAttribute('id');
-
-            if (scrollPos >= sectionTop && scrollPos < sectionTop + sectionHeight) {
-                navButtons.forEach(btn => btn.classList.remove('active'));
-                const activeBtn = document.querySelector(`.nav-btn[href="#${sectionId}"]`);
-                if (activeBtn) {
-                    activeBtn.classList.add('active');
-                }
-            }
-        });
-    });
-});
     </script>
-
-
-    
 </body>
 </html>
