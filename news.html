@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="es" itemscope itemtype="https://schema.org/WebPage">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Noticias - Ejemplo Funcional</title>
+    <meta name="description" content="Mantente informado con nuestras últimas noticias sobre tecnología, ciencia, medicina y exploración espacial.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Rethink+Sans:ital,wght@0,400..800;1,400..800&family=Special+Gothic+Expanded+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script src="js/email.js" defer></script>
+    
+    <!-- Schema.org JSON-LD para WebSite -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Noticias Tecnológicas",
+        "url": "https://ejemplo.com",
+        "description": "Portal de noticias especializado en tecnología, ciencia e innovación",
+        "publisher": {
+            "@type": "Person",
+            "name": "Camilo",
+            "email": "camicamilo499@gmail.com",
+            "telephone": "302 5469787",
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "Calle 76 #24-65",
+                "addressLocality": "Bogotá",
+                "addressCountry": "CO"
+            }
+        },
+        "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://ejemplo.com/search?q={search_term_string}",
+            "query-input": "required name=search_term_string"
+        }
+    }
+    </script>
+
+    <!-- Schema.org JSON-LD para News Articles -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ItemList",
+        "name": "Últimas Noticias",
+        "description": "Colección de artículos de noticias sobre tecnología y ciencia",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "item": {
+                    "@type": "NewsArticle",
+                    "headline": "Avances en Tecnología Sostenible",
+                    "description": "Las últimas innovaciones en energía renovable están transformando el panorama tecnológico mundial",
+                    "image": "https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+                    "datePublished": "2025-05-25T10:00:00Z",
+                    "dateModified": "2025-05-25T10:00:00Z",
+                    "author": {
+                        "@type": "Person",
+                        "name": "Equipo Editorial"
+                    },
+                    "publisher": {
+                        "@type": "Organization",
+                        "name": "Noticias Tecnológicas",
+                        "logo": {
+                            "@type": "ImageObject",
+                            "url": "https://ejemplo.com/logo.png"
+                        }
+                    },
+                    "mainEntityOfPage": {
+                        "@type": "WebPage",
+                        "@id": "https://ejemplo.com/noticias/tecnologia-sostenible"
+                    }
+                }
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "item": {
+                    "@type": "NewsArticle",
+                    "headline": "Descubrimiento Científico Importante",
+                    "description": "Un equipo de investigadores ha hecho un descubrimiento que podría cambiar nuestra comprensión del universo",
+                    "image": "https://images.unsplash.com/photo-1532094349884-543bc11b234d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+                    "datePublished": "2025-05-24T10:00:00Z",
+                    "dateModified": "2025-05-24T10:00:00Z",
+                    "author": {
+                        "@type": "Person",
+                        "name": "Equipo Editorial"
+                    },
+                    "publisher": {
+                        "@type": "Organization",
+                        "name": "Noticias Tecnológicas",
+                        "logo": {
+                            "@type": "ImageObject",
+                            "url": "https://ejemplo.com/logo.png"
+                        }
+                    },
+                    "mainEntityOfPage": {
+                        "@type": "WebPage",
+                        "@id": "https://ejemplo.com/noticias/descubrimiento-cientifico"
+                    }
+                }
+            },
+            {
+                "@type": "ListItem",
+                "position": 3,
+                "item": {
+                    "@type": "NewsArticle",
+                    "headline": "Innovación en Medicina Digital",
+                    "description": "La inteligencia artificial está revolucionando el diagnóstico médico con nuevas herramientas de precisión",
+                    "image": "https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+                    "datePublished": "2025-05-23T10:00:00Z",
+                    "dateModified": "2025-05-23T10:00:00Z",
+                    "author": {
+                        "@type": "Person",
+                        "name": "Equipo Editorial"
+                    },
+                    "publisher": {
+                        "@type": "Organization",
+                        "name": "Noticias Tecnológicas",
+                        "logo": {
+                            "@type": "ImageObject",
+                            "url": "https://ejemplo.com/logo.png"
+                        }
+                    },
+                    "mainEntityOfPage": {
+                        "@type": "WebPage",
+                        "@id": "https://ejemplo.com/noticias/medicina-digital"
+                    }
+                }
+            },
+            {
+                "@type": "ListItem",
+                "position": 4,
+                "item": {
+                    "@type": "NewsArticle",
+                    "headline": "Nuevos Horizontes en la Exploración Espacial",
+                    "description": "La NASA anuncia una nueva misión tripulada a Marte para 2030, marcando un hito en la exploración espacial",
+                    "image": "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+                    "datePublished": "2025-05-22T10:00:00Z",
+                    "dateModified": "2025-05-22T10:00:00Z",
+                    "author": {
+                        "@type": "Person",
+                        "name": "Equipo Editorial"
+                    },
+                    "publisher": {
+                        "@type": "Organization",
+                        "name": "Noticias Tecnológicas",
+                        "logo": {
+                            "@type": "ImageObject",
+                            "url": "https://ejemplo.com/logo.png"
+                        }
+                    },
+                    "mainEntityOfPage": {
+                        "@type": "WebPage",
+                        "@id": "https://ejemplo.com/noticias/exploracion-espacial"
+                    }
+                }
+            },
+            {
+                "@type": "ListItem",
+                "position": 5,
+                "item": {
+                    "@type": "NewsArticle",
+                    "headline": "Revolución en la Educación Virtual",
+                    "description": "Las plataformas de aprendizaje en línea están transformando la educación con realidad virtual inmersiva",
+                    "image": "https://images.unsplash.com/photo-1523961131990-5ea7c61b2107?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+                    "datePublished": "2025-05-21T10:00:00Z",
+                    "dateModified": "2025-05-21T10:00:00Z",
+                    "author": {
+                        "@type": "Person",
+                        "name": "Equipo Editorial"
+                    },
+                    "publisher": {
+                        "@type": "Organization",
+                        "name": "Noticias Tecnológicas",
+                        "logo": {
+                            "@type": "ImageObject",
+                            "url": "https://ejemplo.com/logo.png"
+                        }
+                    },
+                    "mainEntityOfPage": {
+                        "@type": "WebPage",
+                        "@id": "https://ejemplo.com/noticias/educacion-virtual"
+                    }
+                }
+            },
+            {
+                "@type": "ListItem",
+                "position": 6,
+                "item": {
+                    "@type": "NewsArticle",
+                    "headline": "Avances en Inteligencia Artificial Generativa",
+                    "description": "Los nuevos modelos de IA pueden ahora crear contenido indistinguible del producido por humanos",
+                    "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+                    "datePublished": "2025-05-20T10:00:00Z",
+                    "dateModified": "2025-05-20T10:00:00Z",
+                    "author": {
+                        "@type": "Person",
+                        "name": "Equipo Editorial"
+                    },
+                    "publisher": {
+                        "@type": "Organization",
+                        "name": "Noticias Tecnológicas",
+                        "logo": {
+                            "@type": "ImageObject",
+                            "url": "https://ejemplo.com/logo.png"
+                        }
+                    },
+                    "mainEntityOfPage": {
+                        "@type": "WebPage",
+                        "@id": "https://ejemplo.com/noticias/ia-generativa"
+                    }
+                }
+            },
+            {
+                "@type": "ListItem",
+                "position": 7,
+                "item": {
+                    "@type": "NewsArticle",
+                    "headline": "Nuevos Materiales para Electrónica Flexible",
+                    "description": "Científicos desarrollan materiales que permitirán dispositivos electrónicos completamente flexibles y resistentes",
+                    "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+                    "datePublished": "2025-05-19T10:00:00Z",
+                    "dateModified": "2025-05-19T10:00:00Z",
+                    "author": {
+                        "@type": "Person",
+                        "name": "Equipo Editorial"
+                    },
+                    "publisher": {
+                        "@type": "Organization",
+                        "name": "Noticias Tecnológicas",
+                        "logo": {
+                            "@type": "ImageObject",
+                            "url": "https://ejemplo.com/logo.png"
+                        }
+                    },
+                    "mainEntityOfPage": {
+                        "@type": "WebPage",
+                        "@id": "https://ejemplo.com/noticias/electronica-flexible"
+                    }
+                }
+            }
+        ]
+    }
+    </script>
+
+    <!-- Schema.org JSON-LD para ContactPoint -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Camilo",
+        "jobTitle": "Tecnólogo en Análisis y Desarrollo de Sistemas de Información",
+        "description": "Tecnólogo en Análisis y Desarrollo de Sistemas de Información con experiencia en soporte técnico y atención al cliente",
+        "email": "camicamilo499@gmail.com",
+        "telephone": "302 5469787",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Calle 76 #24-65",
+            "addressLocality": "Bogotá",
+            "addressCountry": "CO"
+        },
+        "url": "https://github.com/cracom13",
+        "sameAs": [
+            "https://github.com/cracom13"
+        ],
+        "knowsAbout": [
+            "Análisis y Desarrollo de Sistemas",
+            "Soporte Técnico",
+            "Atención al Cliente",
+            "Ingeniería de Software"
+        ]
+    }
+    </script>
+    
+   
+</head>
+<body>
+    <header class="integrated-header" itemscope itemtype="https://schema.org/WPHeader">
+    <div class="floating-nav">
+        <nav class="nav-container" itemscope itemtype="https://schema.org/SiteNavigationElement">
+            <a href="index.html" class="nav-btn" itemprop="url"><span itemprop="name">Portafolio</span></a>
+            <a href="index.html#projects" class="nav-btn" itemprop="url"><span itemprop="name">Ver Proyectos</span></a>
+            <a href="news.html" class="nav-btn active" itemprop="url"><span itemprop="name">Noticias</span></a>
+            <a href="products.html" class="nav-btn" itemprop="url"><span itemprop="name">Productos</span></a>
+        </nav>
+    </div>
+    
+    <div class="header-content">
+        <h1 itemprop="name">Últimas Noticias</h1>
+        <p itemprop="description">Mantente informado con nuestras actualizaciones</p>
+    </div>
+</header>
+    
+    <main itemscope itemtype="https://schema.org/CollectionPage">
+        <div class="container">
+            <div class="news-grid" itemscope itemtype="https://schema.org/ItemList">
+                <meta itemprop="name" content="Lista de Noticias Tecnológicas">
+                <meta itemprop="description" content="Colección de artículos sobre tecnología, ciencia e innovación">
+
+                <!-- Noticia 1 -->
+                <article class="news-card" data-news="1" itemscope itemtype="https://schema.org/NewsArticle" itemprop="itemListElement">
+                    <meta itemprop="position" content="1">
+                    <div class="news-image" style="background-image: url('https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80');" itemscope itemtype="https://schema.org/ImageObject">
+                        <meta itemprop="url" content="https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80">
+                        <meta itemprop="width" content="800">
+                        <meta itemprop="height" content="600">
+                    </div>
+                    <div class="news-content">
+                        <h3 itemprop="headline">Avances en Tecnología Sostenible</h3>
+                        <time class="news-date" itemprop="datePublished" datetime="2025-05-25T10:00:00Z">25 de Mayo, 2025</time>
+                        <meta itemprop="dateModified" content="2025-05-25T10:00:00Z">
+                        <p class="news-excerpt" itemprop="description">Las últimas innovaciones en energía renovable están transformando el panorama tecnológico mundial...</p>
+                        <div itemprop="author" itemscope itemtype="https://schema.org/Person" style="display: none;">
+                            <meta itemprop="name" content="Equipo Editorial">
+                        </div>
+                        <div itemprop="publisher" itemscope itemtype="https://schema.org/Organization" style="display: none;">
+                            <meta itemprop="name" content="Noticias Tecnológicas">
+                            <div itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
+                                <meta itemprop="url" content="https://ejemplo.com/logo.png">
+                            </div>
+                        </div>
+                        <meta itemprop="mainEntityOfPage" content="https://ejemplo.com/noticias/tecnologia-sostenible">
+                        <button class="view-more">Leer más</button>
+                    </div>
+                </article>
+
+                <!-- Noticia 2 -->
+                <article class="news-card" data-news="2" itemscope itemtype="https://schema.org/NewsArticle" itemprop="itemListElement">
+                    <meta itemprop="position" content="2">
+                    <div class="news-image" style="background-image: url('https://images.unsplash.com/photo-1532094349884-543bc11b234d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80');" itemscope itemtype="https://schema.org/ImageObject">
+                        <meta itemprop="url" content="https://images.unsplash.com/photo-1532094349884-543bc11b234d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80">
+                        <meta itemprop="width" content="800">
+                        <meta itemprop="height" content="600">
+                    </div>
+                    <div class="news-content">
+                        <h3 itemprop="headline">Descubrimiento Científico Importante</h3>
+                        <time class="news-date" itemprop="datePublished" datetime="2025-05-24T10:00:00Z">24 de Mayo, 2025</time>
+                        <meta itemprop="dateModified" content="2025-05-24T10:00:00Z">
+                        <p class="news-excerpt" itemprop="description">Un equipo de investigadores ha hecho un descubrimiento que podría cambiar nuestra comprensión del universo...</p>
+                        <div itemprop="author" itemscope itemtype="https://schema.org/Person" style="display: none;">
+                            <meta itemprop="name" content="Equipo Editorial">
+                        </div>
+                        <div itemprop="publisher" itemscope itemtype="https://schema.org/Organization" style="display: none;">
+                            <meta itemprop="name" content="Noticias Tecnológicas">
+                            <div itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
+                                <meta itemprop="url" content="https://ejemplo.com/logo.png">
+                            </div>
+                        </div>
+                        <meta itemprop="mainEntityOfPage" content="https://ejemplo.com/noticias/descubrimiento-cientifico">
+                        <button class="view-more">Leer más</button>
+                    </div>
+                </article>
+
+                <!-- Noticia 3 -->
+                <article class="news-card" data-news="3" itemscope itemtype="https://schema.org/NewsArticle" itemprop="itemListElement">
+                    <meta itemprop="position" content="3">
+                    <div class="news-image" style="background-image: url('https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80');" itemscope itemtype="https://schema.org/ImageObject">
+                        <meta itemprop="url" content="https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80">
+                        <meta itemprop="width" content="800">
+                        <meta itemprop="height" content="600">
+                    </div>
+                    <div class="news-content">
+                        <h3 itemprop="headline">Innovación en Medicina Digital</h3>
+                        <time class="news-date" itemprop="datePublished" datetime="2025-05-23T10:00:00Z">23 de Mayo, 2025</time>
+                        <meta itemprop="dateModified" content="2025-05-23T10:00:00Z">
+                        <p class="news-excerpt" itemprop="description">La inteligencia artificial está revolucionando el diagnóstico médico con nuevas herramientas de precisión...</p>
+                        <div itemprop="author" itemscope itemtype="https://schema.org/Person" style="display: none;">
+                            <meta itemprop="name" content="Equipo Editorial">
+                        </div>
+                        <div itemprop="publisher" itemscope itemtype="https://schema.org/Organization" style="display: none;">
+                            <meta itemprop="name" content="Noticias Tecnológicas">
+                            <div itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
+                                <meta itemprop="url" content="https://ejemplo.com/logo.png">
+                            </div>
+                        </div>
+                        <meta itemprop="mainEntityOfPage" content="https://ejemplo.com/noticias/medicina-digital">
+                        <button class="view-more">Leer más</button>
+                    </div>
+                </article>
+                
+                <!-- Noticia 4 -->
+                <article class="news-card" data-news="4" itemscope itemtype="https://schema.org/NewsArticle" itemprop="itemListElement">
+                    <meta itemprop="position" content="4">
+                    <div class="news-image" style="background-image: url('https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80');" itemscope itemtype="https://schema.org/ImageObject">
+                        <meta itemprop="url" content="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80">
+                        <meta itemprop="width" content="800">
+                        <meta itemprop="height" content="600">
+                    </div>
+                    <div class="news-content">
+                        <h3 itemprop="headline">Nuevos Horizontes en la Exploración Espacial</h3>
+                        <time class="news-date" itemprop="datePublished" datetime="2025-05-22T10:00:00Z">22 de Mayo, 2025</time>
+                        <meta itemprop="dateModified" content="2025-05-22T10:00:00Z">
+                        <p class="news-excerpt" itemprop="description">La NASA anuncia una nueva misión tripulada a Marte para 2030, marcando un hito en la exploración espacial...</p>
+                        <div itemprop="author" itemscope itemtype="https://schema.org/Person" style="display: none;">
+                            <meta itemprop="name" content="Equipo Editorial">
+                        </div>
+                        <div itemprop="publisher" itemscope itemtype="https://schema.org/Organization" style="display: none;">
+                            <meta itemprop="name" content="Noticias Tecnológicas">
+                            <div itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
+                                <meta itemprop="url" content="https://ejemplo.com/logo.png">
+                            </div>
+                        </div>
+                        <meta itemprop="mainEntityOfPage" content="https://ejemplo.com/noticias/exploracion-espacial">
+                        <button class="view-more">Leer más</button>
+                    </div>
+                </article>
+                
+                <!-- Noticia 5 -->
+                <article class="news-card" data-news="5" itemscope itemtype="https://schema.org/NewsArticle" itemprop="itemListElement">
+                    <meta itemprop="position" content="5">
+                    <div class="news-image" style="background-image: url('https://images.unsplash.com/photo-1523961131990-5ea7c61b2107?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80');" itemscope itemtype="https://schema.org/ImageObject">
+                        <meta itemprop="url" content="https://images.unsplash.com/photo-1523961131990-5ea7c61b2107?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80">
+                        <meta itemprop="width" content="800">
+                        <meta itemprop="height" content="600">
+                    </div>
+                    <div class="news-content">
+                        <h3 itemprop="headline">Revolución en la Educación Virtual</h3>
+                        <time class="news-date" itemprop="datePublished" datetime="2025-05-21T10:00:00Z">21 de Mayo, 2025</time>
+                        <meta itemprop="dateModified" content="2025-05-21T10:00:00Z">
+                        <p class="news-excerpt" itemprop="description">Las plataformas de aprendizaje en línea están transformando la educación con realidad virtual inmersiva...</p>
+                        <div itemprop="author" itemscope itemtype="https://schema.org/Person" style="display: none;">
+                            <meta itemprop="name" content="Equipo Editorial">
+                        </div>
+                        <div itemprop="publisher" itemscope itemtype="https://schema.org/Organization" style="display: none;">
+                            <meta itemprop="name" content="Noticias Tecnológicas">
+                            <div itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
+                                <meta itemprop="url" content="https://ejemplo.com/logo.png">
+                            </div>
+                        </div>
+                        <meta itemprop="mainEntityOfPage" content="https://ejemplo.com/noticias/educacion-virtual">
+                        <button class="view-more">Leer más</button>
+                    </div>
+                </article>
+                
+                <!-- Noticia 6 -->
+                <article class="news-card" data-news="6" itemscope itemtype="https://schema.org/NewsArticle" itemprop="itemListElement">
+                    <meta itemprop="position" content="6">
+                    <div class="news-image" style="background-image: url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80');" itemscope itemtype="https://schema.org/ImageObject">
+                        <meta itemprop="url" content="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80">
+                        <meta itemprop="width" content="800">
+                        <meta itemprop="height" content="600">
+                    </div>
+                    <div class="news-content">
+                        <h3 itemprop="headline">Avances en Inteligencia Artificial Generativa</h3>
+                        <time class="news-date" itemprop="datePublished" datetime="2025-05-20T10:00:00Z">20 de Mayo, 2025</time>
+                        <meta itemprop="dateModified" content="2025-05-20T10:00:00Z">
+                        <p class="news-excerpt" itemprop="description">Los nuevos modelos de IA pueden ahora crear contenido indistinguible del producido por humanos...</p>
+                        <div itemprop="author" itemscope itemtype="https://schema.org/Person" style="display: none;">
+                            <meta itemprop="name" content="Equipo Editorial">
+                        </div>
+                        <div itemprop="publisher" itemscope itemtype="https://schema.org/Organization" style="display: none;">
+                            <meta itemprop="name" content="Noticias Tecnológicas">
+                            <div itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
+                                <meta itemprop="url" content="https://ejemplo.com/logo.png">
+                            </div>
+                        </div>
+                        <meta itemprop="mainEntityOfPage" content="https://ejemplo.com/noticias/ia-generativa">
+                        <button class="view-more">Leer más</button>
+                    </div>
+                </article>
+                
+                <!-- Noticia 7 -->
+                <article class="news-card" data-news="7" itemscope itemtype="https://schema.org/NewsArticle" itemprop="itemListElement">
+                    <meta itemprop="position" content="7">
+                    <div class="news-image" style="background-image: url('https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80');" itemscope itemtype="https://schema.org/ImageObject">
+                        <meta itemprop="url" content="https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80">
+                        <meta itemprop="width" content="800">
+                        <meta itemprop="height" content="600">
+                    </div>
+                    <div class="news-content">
+                        <h3 itemprop="headline">Nuevos Materiales para Electrónica Flexible</h3>
+                        <time class="news-date" itemprop="datePublished" datetime="2025-05-19T10:00:00Z">19 de Mayo, 2025</time>
+                        <meta itemprop="dateModified" content="2025-05-19T10:00:00Z">
+                        <p class="news-excerpt" itemprop="description">Científicos desarrollan materiales que permitirán dispositivos electrónicos completamente flexibles y resistentes...</p>
+                        <div itemprop="author" itemscope itemtype="https://schema.org/Person" style="display: none;">
+                            <meta itemprop="name" content="Equipo Editorial">
+                        </div>
+                        <div itemprop="publisher" itemscope itemtype="https://schema.org/Organization" style="display: none;">
+                            <meta itemprop="name" content="Noticias Tecnológicas">
+                            <div itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
+                                <meta itemprop="url" content="https://ejemplo.com/logo.png">
+                            </div>
+                        </div>
+                        <meta itemprop="mainEntityOfPage" content="https://ejemplo.com/noticias/electronica-flexible">
+                        <button class="view-more">Leer más</button>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <!-- Modal único reutilizable -->
+    <div class="modal-overlay" id="newsModal">
+        <div class="modal-container">
+            <button class="close-modal">✕</button>
+            <div class="modal-image" id="modalImage"></div>
+            <div class="modal-content">
+                <h3 id="modalTitle"></h3>
+                <div class="news-date" id="modalDate"></div>
+                <div class="modal-text" id="modalText"></div>
+            </div>
+        </div>
+    </div>
+     
+    <section class="contact-section" id="contact" itemscope itemtype="https://schema.org/ContactPage">
+        <div class="contact-container">
+            <div class="about-me" itemscope itemtype="https://schema.org/Person">
+                <h2>Sobre mí</h2>
+                <p class="unified-paragraph" itemprop="description">
+                    Tecnólogo en Análisis y Desarrollo de Sistemas de Información con experiencia en soporte técnico y atención al cliente. Actualmente cursando Ingeniería de Software. Apasionado por la resolución de problemas y el trabajo en equipo, con habilidades técnicas sólidas y capacidad para aprender rápidamente nuevas tecnologías.
+                </p>
+                
+                <div class="github-link">
+                    <a href="https://github.com/cracom13" target="_blank" rel="noopener noreferrer" aria-label="Visita mi perfil de GitHub" itemprop="sameAs">
+                        <i class="fab fa-github"></i> Visita mi GitHub
+                    </a>
+                </div>
+                
+                <hr class="section-divider">
+                
+                <div class="contact-info" itemscope itemtype="https://schema.org/Person">
+                    <h3>Información de contacto</h3>
+                    <p><i class="fas fa-phone"></i> <span itemprop="telephone">302 5469787</span></p>
+                    <p><i class="fas fa-envelope"></i> <span itemprop="email">camicamilo499@gmail.com</span></p>
+                    <div itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+                        <p><i class="fas fa-map-marker-alt"></i> 
+                            <span itemprop="streetAddress">Calle 76 #24-65</span>, 
+                            <span itemprop="addressLocality">Bogotá</span>
+                        </p>
+                    </div>
+                    <p><i class="fas fa-id-card"></i> 1.000.320.621</p>
+                </div>
+            </div>
+            
+            <div class="contact-form">
+                <h2>Contáctame</h2>
+                
+                <form id="contact-form-emailjs" itemscope itemtype="https://schema.org/ContactForm">
+                    <div class="form-group">
+                        <label for="name">Nombre</label>
+                        <input type="text" id="name" name="from_name" placeholder="Tu nombre completo" required itemprop="name">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="from_email" placeholder="tu@email.com" required itemprop="email">
+                    </div>
+                    
+                    <!-- Nuevo campo de teléfono -->
+                    <div class="form-group">
+                        <label for="phone">Teléfono</label>
+                        <input type="tel" id="phone" name="phone" placeholder="Tu número de teléfono" itemprop="telephone">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Mensaje</label>
+                        <textarea id="message" name="message" placeholder="Escribe tu mensaje aquí..." required itemprop="text"></textarea>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn" id="submitBtn">
+                        <span class="btn-text">Enviar</span>
+                        <span class="btn-loading" style="display: none;">
+                            <i class="fas fa-spinner fa-spin"></i> Enviando...
+                        </span>
+                    </button>
+                </form>
+
+                <div id="form-messages"></div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Datos de las noticias
+        const newsData = {
+            1: {
+                title: "Avances en Tecnología Sostenible",
+                date: "25 de Mayo, 2025",
+                image: "https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80",
+                content: `
+                    <p>Las últimas innovaciones en energía renovable están transformando el panorama tecnológico mundial de manera revolucionaria. Los científicos han desarrollado nuevos paneles solares con una eficiencia del 95%.</p>
+                    <p>Estos avances representan un salto cuántico en la búsqueda de soluciones energéticas sostenibles. La nueva tecnología utiliza materiales perovskita combinados con silicio para alcanzar niveles de eficiencia nunca antes vistos.</p>
+                    <p>Los expertos predicen que esta tecnología estará disponible comercialmente en los próximos dos años, lo que podría revolucionar completamente la industria de la energía solar.</p>
+                    <p>Además, el costo de producción se ha reducido significativamente, haciendo que esta tecnología sea accesible para un público más amplio.</p>
+                `
+            },
+            2: {
+                title: "Descubrimiento Científico Importante",
+                date: "24 de Mayo, 2025",
+                image: "https://images.unsplash.com/photo-1532094349884-543bc11b234d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80",
+                content: `
+                    <p>Un equipo internacional de científicos ha hecho un descubrimiento revolucionario que podría cambiar fundamentalmente nuestra comprensión del universo y las leyes de la física.</p>
+                    <p>El hallazgo, publicado en la revista Nature, revela la existencia de una nueva partícula subatómica que desafía el modelo estándar de la física de partículas.</p>
+                    <p>Este descubrimiento ha sido posible gracias al uso del acelerador de partículas más avanzado del mundo, donde los científicos han estado trabajando durante más de una década.</p>
+                    <p>Las implicaciones de este descubrimiento son enormes y podrían abrir nuevos campos de investigación en la física teórica y aplicada.</p>
+                `
+            },
+            3: {
+                title: "Innovación en Medicina Digital",
+                date: "23 de Mayo, 2025",
+                image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80",
+                content: `
+                    <p>La inteligencia artificial está transformando radicalmente el campo de la medicina, especialmente en el área del diagnóstico médico, donde nuevas herramientas de precisión están salvando vidas.</p>
+                    <p>Los algoritmos de IA pueden ahora detectar enfermedades en etapas tempranas con una precisión del 98%, superando significativamente la capacidad de diagnóstico humano tradicional.</p>
+                    <p>Hospitales de todo el mundo están implementando estas tecnologías, reduciendo los tiempos de diagnóstico de semanas a minutos en muchos casos.</p>
+                    <p>Esta revolución digital en la medicina promete hacer que la atención médica de calidad sea más accesible y eficiente para pacientes en todo el mundo.</p>
+                `
+            },
+            4: {
+                title: "Nuevos Horizontes en la Exploración Espacial",
+                date: "22 de Mayo, 2025",
+                image: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80",
+                content: `
+                    <p>La NASA ha anunciado oficialmente sus planes para una misión tripulada a Marte en 2030, marcando un hito histórico en la exploración espacial.</p>
+                    <p>La misión, llamada "Mars Horizon", llevará a cuatro astronautas en un viaje de 9 meses hacia el planeta rojo, donde permanecerán durante 18 meses antes de regresar a la Tierra.</p>
+                    <p>Esta iniciativa representa la culminación de décadas de investigación y desarrollo tecnológico, incluyendo nuevos sistemas de soporte vital y propulsión más eficiente.</p>
+                    <p>Los científicos esperan que esta misión proporcione datos valiosos para futuras colonias humanas en Marte y avance nuestra comprensión de la habitabilidad planetaria.</p>
+                `
+            },
+            5: {
+                title: "Revolución en la Educación Virtual",
+                date: "21 de Mayo, 2025",
+                image: "https://images.unsplash.com/photo-1523961131990-5ea7c61b2107?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80",
+                content: `
+                    <p>Las plataformas de aprendizaje en línea están experimentando una transformación radical con la integración de tecnologías de realidad virtual inmersiva.</p>
+                    <p>Los nuevos sistemas permiten a los estudiantes interactuar con modelos 3D complejos, realizar experimentos virtuales y participar en clases con avatares de profesores y compañeros de todo el mundo.</p>
+                    <p>Estudios preliminares muestran que estos métodos mejoran la retención de información en un 40% comparado con la educación tradicional en línea.</p>
+                    <p>Expertos predicen que esta tecnología podría democratizar el acceso a educación de calidad, especialmente en regiones remotas con acceso limitado a instituciones educativas tradicionales.</p>
+                `
+            },
+            6: {
+                title: "Avances en Inteligencia Artificial Generativa",
+                date: "20 de Mayo, 2025",
+                image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80",
+                content: `
+                    <p>Los últimos modelos de inteligencia artificial generativa han alcanzado niveles de sofisticación que los hacen prácticamente indistinguibles de los creadores humanos.</p>
+                    <p>Estos sistemas pueden ahora generar texto coherente, imágenes fotorrealistas, música original e incluso código funcional con una calidad sin precedentes.</p>
+                    <p>Las aplicaciones potenciales abarcan desde la creación de contenido hasta el diseño de productos y la resolución de problemas complejos en múltiples industrias.</p>
+                    <p>Sin embargo, estos avances también plantean importantes cuestiones éticas sobre la autoría, la propiedad intelectual y el potencial uso malintencionado de estas tecnologías.</p>
+                `
+            },
+            7: {
+                title: "Nuevos Materiales para Electrónica Flexible",
+                date: "19 de Mayo, 2025",
+                image: "https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80",
+                content: `
+                    <p>Científicos del MIT han desarrollado una nueva clase de materiales que prometen revolucionar el campo de la electrónica flexible.</p>
+                    <p>Estos materiales, basados en compuestos de grafeno y polímeros especiales, pueden doblarse, estirarse e incluso autorepararse sin perder sus propiedades conductoras.</p>
+                    <p>Las aplicaciones potenciales incluyen pantallas enrollables, dispositivos electrónicos implantables en el cuerpo humano y sensores que pueden integrarse en la ropa.</p>
+                    <p>Los investigadores estiman que los primeros productos comerciales que utilicen esta tecnología podrían llegar al mercado en los próximos tres años.</p>
+                `
+            }
+        };
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const modal = document.getElementById('newsModal');
+            const modalImage = document.getElementById('modalImage');
+            const modalTitle = document.getElementById('modalTitle');
+            const modalDate = document.getElementById('modalDate');
+            const modalText = document.getElementById('modalText');
+            const closeBtn = document.querySelector('.close-modal');
+            
+            // Función para abrir modal
+            function openModal(newsId) {
+                const news = newsData[newsId];
+                if (!news) return;
+                
+                modalImage.style.backgroundImage = `url('${news.image}')`;
+                modalTitle.textContent = news.title;
+                modalDate.textContent = news.date;
+                modalText.innerHTML = news.content;
+                
+                modal.classList.add('active');
+                document.body.classList.add('modal-active');
+                document.body.style.overflow = 'hidden';
+            }
+            
+            // Función para cerrar modal
+            function closeModal() {
+                modal.classList.remove('active');
+                document.body.classList.remove('modal-active');
+                document.body.style.overflow = '';
+            }
+            
+            // Eventos para abrir modal
+            document.addEventListener('click', function(e) {
+                if (e.target.classList.contains('view-more')) {
+                    e.preventDefault();
+                    const newsCard = e.target.closest('.news-card');
+                    const newsId = newsCard.getAttribute('data-news');
+                    openModal(newsId);
+                }
+            });
+            
+            // Eventos para cerrar modal
+            closeBtn.addEventListener('click', closeModal);
+            
+            modal.addEventListener('click', function(e) {
+                if (e.target === modal) {
+                    closeModal();
+                }
+            });
+            
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape' && modal.classList.contains('active')) {
+                    closeModal();
+                }
+            });
+            
+            // Prevenir propagación en el contenido del modal
+            document.querySelector('.modal-container').addEventListener('click', function(e) {
+                e.stopPropagation();
+            });
+        });
+
+        // Función para scroll suave (si necesitas el botón de noticias)
+        if (document.getElementById('noticias-btn')) {
+            document.getElementById('noticias-btn').addEventListener('click', function(e) {
+                e.preventDefault();
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+        }
+    </script>
+
+</body>
+</html>
