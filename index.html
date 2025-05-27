@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" itemscope itemtype="https://schema.org/WebPage">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,9 +7,11 @@
     <meta name="description" content="Portafolio profesional de Camilo González, Tecnólogo en Desarrollo de Sistemas e Ingeniero de Software en formación">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Finlandica:ital,wght@0,400..700;1,400..700&family=Special+Gothic+Expanded+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rethink+Sans:ital,wght@0,400..800;1,400..800&family=Special+Gothic+Expanded+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script src="js/email.js" defer></script>
 
     <!-- Microdatos Schema.org -->
     <!-- Microdatos Schema.org para persona -->
@@ -120,20 +122,40 @@
     }
     </script>
 </head>
+
 <body>
-    <section class="hero">
+     <header class="integrated-header">
+    <section class="hero" id="about">
         <div class="hero-container">
             <div class="hero-text">
                 <h1>CAMILO ANDRÉS GONZÁLEZ</h1>
                 <p>Tecnólogo en Desarrollo de Sistemas | Ingeniero de Software en formación</p>
-                <a href="#case-studies" class="cta-button">Ver mis proyectos</a>
-            </div>
+                
+                <!-- Nueva barra de navegación con botones -->
+               
             <div class="profile-image-container">
-                <img src="img/foto_de_perfil.png" alt="Foto de perfil de Camilo González" class="profile-image">
+                <img src="img/foto_de_perfil.webp" alt="Foto de perfil de Camilo González" class="profile-image">
             </div>
+          
         </div>
+  <nav class="floating-nav">
+    <div class="nav-container">
+        <!-- Enlace a sección About en la misma página (scroll suave) -->
+        <a href="#about" class="nav-btn">Portafolio</a>
+        
+        <!-- Enlace a sección Proyectos en la misma página (scroll suave) -->
+        <a href="#projects" class="nav-btn">Ver Proyectos</a>
+        
+        <!-- Enlace a página de noticias -->
+        <a href="news.html" class="noticias-btn">Noticias</a>
+        
+        <!-- Enlace a página de productos -->
+        <a href="products.html" class="nav-btn">Productos</a>
+    </div>
+</nav>
+             
     </section>
-    
+    </header>
     <section class="about">
         <h2>Desarrollando soluciones tecnológicas</h2>
         <div class="about-content">
@@ -144,7 +166,7 @@
         </div>
     </section>
 
-    <section class="skills">
+    <section class="skills" id="skills">
         <div class="container">
             <h2>MIS HABILIDADES</h2>
             <div class="skills-grid">
@@ -184,29 +206,29 @@
         </div>
     </section>
     
-    <section class="case-studies" id="case-studies">
+    <section class="case-studies" id="projects">
         <h2>Proyectos Destacados</h2>
         <div class="case-study-grid">
             <div class="case-study-card">
-                <div class="case-study-image" style="background-image: url('img/Inventario.png')"></div>
+                <div class="case-study-image" style="background-image: url('img/Inventario.webp')"></div>
                 <div class="case-study-content">
                     <h3>Sistema de gestión para PYMEs</h3>
                     <p>Proyecto final del SENA desarrollado en Java y MySQL que permite a las pequeñas empresas gestionar inventario, ventas y clientes.</p>
-                    <a href="#" class="view-case">Ver proyecto <i class="fas fa-arrow-right"></i></a>
+                    
                 </div>
             </div>
             
             <div class="case-study-card">
-                <div class="case-study-image" style="background-image: url('img/portafolio.png')"></div>
+                <div class="case-study-image" style="background-image: url('img/portafolio.webp')"></div>
                 <div class="case-study-content">
                     <h3>Portafolio Personal</h3>
                     <p>Sitio web personal desarrollado con HTML, CSS y JavaScript para mostrar mis proyectos y habilidades.</p>
-                    <a href="#" class="view-case">Ver proyecto <i class="fas fa-arrow-right"></i></a>
+                   
                 </div>
             </div>
             
             <div class="case-study-card">
-                <div class="case-study-image" style="background-image: url('img/Soporte_Tecnico_Caricaturesco.png')"></div>
+                <div class="case-study-image" style="background-image: url('img/Soporte_Tecnico_Caricaturesco.webp')"></div>
                 <div class="case-study-content">
                     <h3>Sistema de Soporte Técnico - HELISA CLOUD</h3>
                     <p>Desarrollé un sistema para gestionar tickets de soporte técnico durante mi experiencia en HELISA CLOUD.</p>
@@ -216,131 +238,22 @@
                     <div class="employment-dates">
                         <strong>Periodo:</strong> Enero 2022 - Enero 2023
                     </div>
-                    <a href="#" class="view-case">Ver detalles <i class="fas fa-arrow-right"></i></a>
+                    
                 </div>
             </div>
         </div>
     </section>
-     <section class="banners-section">
-        <div class="container">
-            <h2>Recomendaciones y Colaboraciones</h2>
-            <div class="banners-grid">
-                <!-- Banner de Felipe Tabares -->
-                <div class="reference-banner">
-                    <a href="https://cv-felipetabares.xyz/" class="felipe-banner-ref" target="_blank">
-                        <div class="felipe-banner-corner"></div>
-                        <div class="felipe-banner-title">PORTAFOLIO PROFESIONAL</div>
-                        <div class="felipe-banner-subtitle">
-                            <span class="felipe-banner-highlight">Felipe Tabares</span> · Software Engineer & Smart Contract Developer. Descubre mis proyectos, experiencia y soluciones blockchain.
-                        </div>
-                        <div class="felipe-banner-cta">
-                            Ver portafolio <i class="fas fa-arrow-right"></i>
-                        </div>
-                    </a>
-                </div>
-
-                <!-- Espacio para futuros banners -->
-                <div class="reference-banner placeholder">
-                    <p>Próximamente más colaboraciones</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-<style>
-        /* Estilos para la nueva sección */
-        .banners-section {
-            background-color: var(--light-color);
-            padding: 60px 20px;
-        }
-
-        .banners-section h2 {
-            text-align: center;
-            font-family: "Special Gothic Expanded One", sans-serif;
-            font-size: 2rem;
-            margin-bottom: 40px;
-            color: var(--primary-color);
-        }
-
-        .banners-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-
-        .reference-banner {
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease;
-        }
-
-        .reference-banner:hover {
-            transform: translateY(-5px);
-        }
-
-        .reference-banner.placeholder {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            min-height: 200px;
-            background-color: rgba(255,255,255,0.7);
-            border: 2px dashed var(--secondary-color);
-        }
-
-        /* Estilos del banner de Felipe (adaptados para integración) */
-        .felipe-banner-ref {
-            font-family: 'Lato', sans-serif;
-            background: linear-gradient(135deg, #e3f1f7 0%, #24788f 100%);
-            color: #1a1a1a;
-            padding: 25px;
-            border-radius: 8px;
-            position: relative;
-            overflow: hidden;
-            box-shadow: 0 5px 15px rgba(36,120,143,0.1);
-            display: block;
-            text-decoration: none;
-            height: 100%;
-            min-height: 200px;
-        }
-
-        .felipe-banner-title {
-            font-family: 'Special Gothic Expanded One', sans-serif;
-            font-size: 1.5rem;
-            margin-bottom: 10px;
-            color: #1a2634;
-        }
-
-        .felipe-banner-subtitle {
-            font-size: 1rem;
-            margin-bottom: 15px;
-            color: #223047;
-        }
-
-        .felipe-banner-cta {
-            color: #24788f;
-            font-weight: 600;
-        }
-
-        @media (max-width: 768px) {
-            .banners-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
     
-    <section class="contact-section">
+    <section class="contact-section" id="contact">
         <div class="contact-container">
             <div class="about-me">
                 <h2>Sobre mí</h2>
-                <p>Tecnólogo en Análisis y Desarrollo de Sistemas de Información con experiencia en soporte técnico y atención al cliente. Actualmente cursando Ingeniería de Software.</p>
-                <p>Apasionado por la resolución de problemas y el trabajo en equipo, con habilidades técnicas sólidas y capacidad para aprender rápidamente nuevas tecnologías.</p>
+                <p class="unified-paragraph">
+            Tecnólogo en Análisis y Desarrollo de Sistemas de Información con experiencia en soporte técnico y atención al cliente. Actualmente cursando Ingeniería de Software. Apasionado por la resolución de problemas y el trabajo en equipo, con habilidades técnicas sólidas y capacidad para aprender rápidamente nuevas tecnologías.
+            </p>
                 
                 <div class="github-link">
-                    <a href="https://github.com/tu-usuario" target="_blank" rel="noopener noreferrer" aria-label="Visita mi perfil de GitHub">
+                    <a href="https://github.com/cracom13" target="_blank" rel="noopener noreferrer" aria-label="Visita mi perfil de GitHub">
                         <i class="fab fa-github"></i> Visita mi GitHub
                     </a>
                 </div>
@@ -356,28 +269,93 @@
                 </div>
             </div>
             
-            <div class="contact-form">
-                <h2>Contáctame</h2>
-                <form action="#" method="post">
-                    <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" name="email" placeholder="Por favor ingresa tu email" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="mobile">Teléfono móvil</label>
-                        <input type="tel" id="mobile" name="mobile" placeholder="Ingresa tu número de teléfono">
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="message">Mensaje</label>
-                        <textarea id="message" name="message" placeholder="Ingresa tu mensaje" required></textarea>
-                    </div>
-                    
-                    <button type="submit" class="submit-btn">Enviar <i class="fas fa-arrow-right"></i></button>
-                </form>
-            </div>
+           <div class="contact-form">
+    <h2>Contáctame</h2>
+    
+    <form id="contact-form-emailjs">
+        <div class="form-group">
+            <label for="name">Nombre</label>
+            <input type="text" id="name" name="from_name" placeholder="Tu nombre completo" required>
         </div>
+        
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="from_email" placeholder="tu@email.com" required>
+        </div>
+        
+        <!-- Nuevo campo de teléfono -->
+        <div class="form-group">
+            <label for="phone">Teléfono</label>
+            <input type="tel" id="phone" name="phone" placeholder="Tu número de teléfono">
+        </div>
+        
+        <div class="form-group">
+            <label for="message">Mensaje</label>
+            <textarea id="message" name="message" placeholder="Escribe tu mensaje aquí..." required></textarea>
+        </div>
+        
+        <button type="submit" class="submit-btn" id="submitBtn">
+            <span class="btn-text">Enviar</span>
+            <span class="btn-loading" style="display: none;">
+                <i class="fas fa-spinner fa-spin"></i> Enviando...
+            </span>
+        </button>
+    </form>
+
+    <div id="form-messages"></div>
+</div>
     </section>
+
+    <script>
+        // Scroll suave para navegación
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Funcionalidad para botones de navegación
+        const navButtons = document.querySelectorAll('.nav-btn');
+        
+        navButtons.forEach(button => {
+            button.addEventListener('click', function(e) {
+                // Remover clase active de todos los botones
+                navButtons.forEach(btn => btn.classList.remove('active'));
+                // Agregar clase active al botón clickeado
+                this.classList.add('active');
+            });
+        });
+
+        // Destacar botón activo según scroll
+        window.addEventListener('scroll', function() {
+            const sections = document.querySelectorAll('section[id]');
+            const scrollPos = window.scrollY + 100;
+
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.offsetHeight;
+                const sectionId = section.getAttribute('id');
+
+                if (scrollPos >= sectionTop && scrollPos < sectionTop + sectionHeight) {
+                    navButtons.forEach(btn => btn.classList.remove('active'));
+                    const activeBtn = document.querySelector(`.nav-btn[href="#${sectionId}"]`);
+                    if (activeBtn) {
+                        activeBtn.classList.add('active');
+                    }
+                }
+            });
+        });
+
+      
+    </script>
+
+
+    
 </body>
 </html>
